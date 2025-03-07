@@ -1,14 +1,13 @@
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
--- Sntup language servers.
+-- Setup language servers.~возможно неккоректно работает с cpp
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 lspconfig.prismals.setup {}
 lspconfig.cssls.setup {
     capabilities = capabilities
 }
 lspconfig.golangci_lint_ls.setup {}
+lspconfig.clangd.setup {}
 lspconfig.rust_analyzer.setup {
   settings = {
     ['rust-analyzer'] = {
