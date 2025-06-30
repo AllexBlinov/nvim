@@ -42,10 +42,16 @@ require("lazy").setup({
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
     -- null-ls диагностика, форматирование и т.п.
-	{ 
-        'jose-elias-alvarez/null-ls.nvim',
-        event = "VeryLazy"
-    },
+    -- Мертв... none-ls на замену
+	-- { 
+	--         'jose-elias-alvarez/null-ls.nvim',
+	--         event = "VeryLazy",
+	--     },
+{
+  "nvimtools/none-ls.nvim",
+  event = "VeryLazy",
+  dependencies = { "mason.nvim", "nvimtools/none-ls-extras.nvim", },
+},
     -- autopairs ставит парные ковычки, скобки и тп
     {
       'windwp/nvim-autopairs',

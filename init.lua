@@ -9,7 +9,7 @@
 	require('plugins.lsp')
 	require('plugins.mason')
 	require('plugins.telescope')
-	require('plugins.nullls')
+	require('plugins.none-ls')
 	require('plugins.autopairs')
 	require('plugins.bufferline')
 	require('plugins.dashboard')
